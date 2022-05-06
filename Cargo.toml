@@ -1,13 +1,14 @@
 [package]
 authors = ['Logion Team <https://github.com/logion-network>']
-description = 'Implements Logion shared components.'
+description = 'Implements logion shared components.'
 edition = '2018'
 homepage = 'https://logion.network'
-license = 'Apache 2.0'
+license = 'Apache-2.0'
 name = 'logion-shared'
 readme = 'README.md'
-repository = 'https://github.com/logion-network/logion-node'
+repository = 'https://github.com/logion-network/logion-shared'
 version = '0.1.0'
+keywords = ['logion']
 
 [package.metadata.docs.rs]
 targets = ['x86_64-unknown-linux-gnu']
