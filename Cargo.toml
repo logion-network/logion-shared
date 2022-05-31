@@ -1,7 +1,7 @@
 [package]
 authors = ['Logion Team <https://github.com/logion-network>']
 description = 'Implements logion shared components.'
-edition = '2018'
+edition = '2021'
 homepage = 'https://logion.network'
 license = 'Apache-2.0'
 name = 'logion-shared'
@@ -14,7 +14,7 @@ keywords = ['logion']
 targets = ['x86_64-unknown-linux-gnu']
 
 [dependencies]
-frame-support = { default-features = false, version = '3.0.0' }
+frame-support = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.22" }
 
 [features]
 default = ['std']

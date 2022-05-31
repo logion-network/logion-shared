@@ -2,8 +2,8 @@
 
 use frame_support::{
     Parameter,
-    dispatch::{Weight, GetDispatchInfo},
-    traits::{UnfilteredDispatchable, Vec}
+    dispatch::{Weight, GetDispatchInfo, Vec},
+    traits::UnfilteredDispatchable
 };
 
 pub trait CreateRecoveryCallFactory<Origin, AccountId, BlockNumber> {
