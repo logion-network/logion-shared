@@ -7,7 +7,7 @@ use frame_support::{
 };
 
 pub trait CreateRecoveryCallFactory<Origin, AccountId, BlockNumber> {
-    type Call: Parameter + UnfilteredDispatchable<Origin = Origin> + GetDispatchInfo;
+    type Call: Parameter + UnfilteredDispatchable<RuntimeOrigin = Origin> + GetDispatchInfo;
 
     fn build_create_recovery_call(legal_officers: Vec<AccountId>, threshold: u16, delay_period: BlockNumber) -> Self::Call;
 }
@@ -17,7 +17,7 @@ pub trait LocQuery<AccountId> {
 }
 
 pub trait MultisigApproveAsMultiCallFactory<Origin, AccountId, Timepoint> {
-    type Call: Parameter + UnfilteredDispatchable<Origin = Origin> + GetDispatchInfo;
+    type Call: Parameter + UnfilteredDispatchable<RuntimeOrigin = Origin> + GetDispatchInfo;
 
     fn build_approve_as_multi_call(
         threshold: u16,
@@ -29,7 +29,7 @@ pub trait MultisigApproveAsMultiCallFactory<Origin, AccountId, Timepoint> {
 }
 
 pub trait MultisigAsMultiCallFactory<Origin, AccountId, Timepoint> {
-    type Call: Parameter + UnfilteredDispatchable<Origin = Origin> + GetDispatchInfo;
+    type Call: Parameter + UnfilteredDispatchable<RuntimeOrigin = Origin> + GetDispatchInfo;
 
     fn build_as_multi_call(
         threshold: u16,
