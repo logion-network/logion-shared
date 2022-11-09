@@ -35,8 +35,7 @@ pub trait MultisigAsMultiCallFactory<Origin, AccountId, Timepoint> {
         threshold: u16,
         other_signatories: Vec<AccountId>,
         maybe_timepoint: Option<Timepoint>,
-        call: Vec<u8>,
-        store_call: bool,
+        call: Box<Self::Call>,
         max_weight: Weight,
     ) -> Self::Call;
 }
