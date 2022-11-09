@@ -5,6 +5,7 @@ use frame_support::{
     dispatch::{Weight, GetDispatchInfo, Vec},
     traits::UnfilteredDispatchable
 };
+use sp_std::boxed::Box;
 
 pub trait CreateRecoveryCallFactory<Origin, AccountId, BlockNumber> {
     type Call: Parameter + UnfilteredDispatchable<RuntimeOrigin = Origin> + GetDispatchInfo;
